@@ -27,9 +27,8 @@ pip install -r requirements.txt
 ### Setup
 
 1. Clone or download this repository to your local machine.
-2. Navigate to the project directory: `cd multi_agents`
-3. Ensure SUMO is properly installed and `SUMO_HOME` is set.
-4. Verify the SUMO configuration files in `sumo_files/` are correctly referenced (e.g., `RL.sumocfg` points to valid network and route files).
+2. Ensure SUMO is properly installed and `SUMO_HOME` is set.
+3. Verify the SUMO configuration files in `sumo_files/` are correctly referenced.
 
 ## Usage
 
