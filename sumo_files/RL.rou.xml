@@ -1,0 +1,71 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- ===========================
+         MAIN EAST–WEST CORRIDOR
+         =========================== -->
+
+    <!-- West → East (low flow) -->
+    <flow id="EW_low"
+          begin="0" end="3600"
+          from="-E0" to="Node1_2_WB"
+          via="Node2_3_WB"
+          vehsPerHour="400"/>
+
+    <!-- East → West (medium flow) -->
+    <flow id="WE_med"
+          begin="0" end="3600"
+          from="Node1_2_EB" to="E0"
+          via="-Node2_3_WB"
+          vehsPerHour="900"/>
+
+    <!-- East → West (high flow) -->
+    <flow id="WE_high"
+          begin="0" end="3600"
+          from="-E4" to="Node2_7_NB"
+          via="Node2_5_NB"
+          vehsPerHour="1400"/>
+
+
+    <!-- ===========================
+         NORTH–SOUTH CORRIDOR
+         =========================== -->
+
+    <!-- South → North heavy arterial -->
+    <flow id="SN_heavy"
+          begin="0" end="3600"
+          from="Node2_7_SB" to="E4"
+          via="Node2_5_SB"
+          vehsPerHour="1800"/>
+
+    <!-- North → South medium -->
+    <flow id="NS_med"
+          begin="0" end="3600"
+          from="-E4" to="Node2_7_NB"
+          via="Node2_5_NB"
+          vehsPerHour="800"/>
+
+
+    <!-- ===========================
+         EAST SIDE TO OUTSIDE CITY
+         =========================== -->
+
+    <!-- East entrance (-E4) → leaves at E6 -->
+    <flow id="E_in_to_out"
+          begin="0" end="3600"
+          from="-E4" to="E6"
+          via="-E3 -E2"
+          vehsPerHour="600"/>
+
+
+    <!-- ===========================
+         JUNCTION → JUNCTION FLOW
+         =========================== -->
+
+    <flow id="J1_to_Node4"
+          begin="0" end="3600"
+          fromJunction="J1"
+          toJunction="Node4"
+          vehsPerHour="900"/>
+
+</routes>

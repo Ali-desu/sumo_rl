@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-30 16:11:37 by Eclipse SUMO GUI Version 1.24.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Lenovo\Desktop\multi_agents\RL.net.xml"/>
+        <route-files value="C:\Users\Lenovo\Desktop\multi_agents\RL.rou.xml"/>
+        <additional-files value="C:\Users\Lenovo\Desktop\multi_agents\RL.add.xml"/>
+        <junction-taz value="true"/>
+    </input>
+
+</sumoConfiguration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e2_file.xsd">
+   <interval begin="0.00" end="108.00" id="e2_13" sampledSeconds="26.96" nVehEntered="9" nVehLeft="9" nVehSeen="9" meanSpeed="6.55" meanTimeLoss="1.53" meanOccupancy="3.18" maxOccupancy="25.00" meanMaxJamLengthInVehicles="0.07" meanMaxJamLengthInMeters="0.12" maxJamLengthInVehicles="1" maxJamLengthInMeters="1.77" jamLengthInVehiclesSum="8" jamLengthInMetersSum="12.44" meanHaltingDuration="9.00" maxHaltingDuration="9.00" haltingDurationSum="9.00" meanIntervalHaltingDuration="9.00" maxIntervalHaltingDuration="9.00" intervalHaltingDurationSum="9.00" startedHalts="1.00" meanVehicleNumber="0.32" maxVehicleNumber="2" />
+</detector>
