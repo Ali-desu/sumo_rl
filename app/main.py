@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import traci
+import pickle
 
 from app.config.config import Config, INTERSECTIONS
 from  app.utils.utils import get_state
@@ -88,6 +89,8 @@ def main():
             traci.simulationStep()
             step += 1
 
+            #
+
             # ----- Observe & Learn -----
             for agent in agents.values():
                 new_state = get_state(agent.tls_id, agent.detector_groups)
@@ -110,6 +113,12 @@ def main():
     print("\nSimulation finished.")
     for name, ag in agents.items():
         print(f"{name} final Q-table size: {len(ag.q_table)} states")
+
+    # Save Q-tables for each agent
+    for name, agent in agents.items():
+        with open(f'models/{name}_q_table.pkl', 'wb') as f:
+            pickle.dump(agent.q_table, f)
+    print("Q-tables saved to models/ directory.")
 
     plot_results(agents)
 

@@ -1,3 +1,5 @@
 numpy
 matplotlib
 traci
+torch
+kafka-python
